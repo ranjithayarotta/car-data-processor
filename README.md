@@ -55,7 +55,7 @@ target/site/jacoco/index.html
 
 ### Prerequisites
 
-- Java JDK 17+
+- Java JDK 20+
 - Maven 3.6.0+
 
 ### Setup

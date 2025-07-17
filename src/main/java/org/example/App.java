@@ -119,8 +119,14 @@ public class App {
     public static void main(String[] args) throws Exception {
         CsvParser csvParser = new CsvParser();
         XmlParser xmlParser = new XmlParser();
-        List<CarBrand> brands = csvParser.parse(new File("src/main/resources/CarsBrand.csv"));
-        List<Car> cars = xmlParser.parse(new File("src/main/resources/carsType.xml"));
+        File brandsFile = new File("src/main/resources/CarsBrand.csv");
+        File carsFile = new File("src/main/resources/carsType.xml");
+        if (!brandsFile.exists() || !carsFile.exists()) {
+            System.err.println("Error: Required data files not found. Please ensure both CarsBrand.csv and carsType.xml exist in src/main/resources");
+            System.exit(1);
+        }
+        List<CarBrand> brands = csvParser.parse(brandsFile);
+        List<Car> cars = xmlParser.parse(carsFile);
         BrandRepository brandRepository = new InMemoryBrandRepository(brands);
         CarRepository carRepository = new InMemoryCarRepository(cars);
         CarFilterFactory carFilterFactory = new CarFilterFactory(brandRepository);

@@ -16,6 +16,17 @@
         </configuration>
       </plugin>
       <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>org.example.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.1.2</version>
       </plugin>
@@ -51,7 +62,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>App</mainClass>
+                  <mainClass>org.example.App</mainClass>
                 </transformer>
               </transformers>
             </configuration>
