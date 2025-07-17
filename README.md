@@ -55,13 +55,13 @@ target/site/jacoco/index.html
 
 ### Prerequisites
 
-- Java JDK 11+
+- Java JDK 17+
 - Maven 3.6.0+
 
 ### Setup
 
 ```bash
-git clone https://github.com/yourusername/car-data-processor.git
+git clone https://github.com/ranjithayarotta/car-data-processor
 cd car-data-processor
 mvn clean install
 java -jar target/car-data-processor-1.0-SNAPSHOT.jar
@@ -72,6 +72,15 @@ java -jar target/car-data-processor-1.0-SNAPSHOT.jar
 ##  Usage
 
 On startup, select an output format. Then use the menu:
+
+```
+Current Output Format: Table (default)
+Select Output Format:
+1. Table Format (default)
+2. JSON Format
+3. XML Format
+   Choose format (1-3, or Enter to keep current):
+   ```
 
 ```
 Car Data Processor
