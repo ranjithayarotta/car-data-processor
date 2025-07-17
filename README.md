@@ -84,7 +84,7 @@ Car Data Processor
 ```
 
 ### Example Commands
-
+```
 1. Filter by Brand and Price
    Example: Find all BMW cars between $30,000 and $50,000
 
@@ -100,7 +100,8 @@ Sample Output (Table Format):
 | BMW   | 330i       | 2022-03-15    | 42900.00 | USD     |
 | BMW   | X5         | 2021-11-20    | 48500.00 | USD     |
 +-------+------------+---------------+----------+--------+
-
+```
+```
 2. Filter by Brand and Release Date
 
 Select option: 2
@@ -115,8 +116,8 @@ Output:
 | Honda | Accord LX   | 2021-05-20    | 26500.00 | USD     |
 | Honda | CR-V EX     | 2020-09-12    | 31200.00 | USD     |
 +-------+-------------+---------------+----------+---------+
-
-
+```
+```
 3. Sort by Release Date (Newest First)
 
 Select option: 3
@@ -130,7 +131,8 @@ Output:
 | ...    | ...        | ...           | ...      | ...     |
 +--------+------------+---------------+----------+---------+
 
-
+```
+```
 4. Sort by Price (Highest First)
 
 Select option: 4
@@ -145,7 +147,8 @@ Output:
 | ...      | ...        | ...           | ...       | ...     |
 +----------+------------+---------------+-----------+---------+
 
-
+```
+```
 4. Sort by Price (Highest First)
 
 Select option: 4
@@ -159,7 +162,7 @@ Output:
 | ...      | ...        | ...           | ...       | ...     |
 +----------+------------+---------------+-----------+---------+
 
-
+```
 
 - **Change output to JSON**:
   ```
