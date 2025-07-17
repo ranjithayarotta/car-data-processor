@@ -149,18 +149,21 @@ Output:
 
 ```
 ```
-4. Sort by Price (Highest First)
+5. Sort cars by type and currency
 
-Select option: 4
+Select option: 5
 Output:
-+----------+------------+---------------+-----------+---------+
-| Brand    | Model      | Release Date  | Price     | Currency|
-+----------+------------+---------------+-----------+---------+
-| Porsche  | 911 Turbo  | 2022-06-18    | 127500.00 | USD     |
-| Mercedes | S-Class    | 2021-09-22    | 112300.00 | USD     |
-| Land Rover| Defender  | 2022-01-15    | 82500.00  | USD     |
-| ...      | ...        | ...           | ...       | ...     |
-+----------+------------+---------------+-----------+---------+
+
++------------+----------+--------+------------+-----------+
+| Type       | Currency | Brand  | Model      |  Price    |
++------------+----------+--------+------------+-----------+
+| SUV        | USD      | BMW    | X5         | 62500.00  |
+| SUV        | EUR      | Volvo  | XC90       | 58900.00  |
+| Sedan      | USD      | Audi   | A6         | 54900.00  |
+| Electric   | USD      | Tesla  | Model 3    | 42900.00  |
+| Truck      | USD      | Ford   | F-150      | 38500.00  |
++------------+----------+--------+------------+-----------+
+
 
 ```
 
