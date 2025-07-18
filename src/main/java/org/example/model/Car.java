@@ -20,14 +20,12 @@ public final class Car {
         this.carBrand = builder.carBrand;  // Initialize from builder
     }
 
-    // Getters
     public String getType() { return type; }
     public String getBrand() { return brand; }
     public String getModel() { return model; }
     public Map<String, BigDecimal> getPrices() { return prices; }
     public CarBrand getCarBrand() { return carBrand; }  // New getter
 
-    // Builder
     public static class Builder {
         private String type;
         private String brand;
@@ -65,7 +63,6 @@ public final class Car {
         }
     }
 
-    // Optionally add equals, hashCode, toString
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

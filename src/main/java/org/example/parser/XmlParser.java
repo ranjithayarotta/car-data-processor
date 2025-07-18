@@ -13,7 +13,6 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 public class XmlParser implements FileParser<Car> {
-    // XML Constants
     private static final String CURRENCY_ATTR = "currency";
     private static final String CAR_NODE = "car";
     private static final String TYPE_NODE = "type";
@@ -22,7 +21,6 @@ public class XmlParser implements FileParser<Car> {
     private static final String PRICES_NODE = "prices";
     private static final String UNKNOWN_BRAND = "Unknown";
 
-    // Brand mapping
     private static final Map<String, String> MODEL_TO_BRAND = Map.ofEntries(
             Map.entry("rav4", "Toyota"),
             Map.entry("civic", "Honda"),
@@ -82,10 +80,8 @@ public class XmlParser implements FileParser<Car> {
     private Map<String, BigDecimal> parsePrices(Element carElement) {
         Map<String, BigDecimal> prices = new HashMap<>();
 
-        // Parse primary price
         parsePriceElement(carElement, PRICE_NODE).ifPresent(prices::putAll);
 
-        // Parse additional prices from prices container
         NodeList pricesNodes = carElement.getElementsByTagName(PRICES_NODE);
         if (pricesNodes.getLength() > 0) {
             NodeList priceNodes = ((Element) pricesNodes.item(0)).getElementsByTagName(PRICE_NODE);

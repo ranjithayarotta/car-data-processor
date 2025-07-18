@@ -24,8 +24,6 @@ public class InMemoryBrandRepository implements BrandRepository {
         if (brandNames == null || brandNames.isEmpty()) {
             return Collections.emptyList();
         }
-
-        // Convert to lowercase for case-insensitive comparison
         Set<String> lowercaseBrandNames = brandNames.stream()
                 .filter(Objects::nonNull)
                 .map(String::toLowerCase)

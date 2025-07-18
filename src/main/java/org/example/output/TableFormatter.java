@@ -17,8 +17,6 @@ public class TableFormatter implements OutputFormatter {
     private static final int PRICE_WIDTH = 15;
     private static final int DATE_WIDTH = 15;
 
-    // Format strings
-
     private static final String HEADER_FORMAT =
             "%-" + BRAND_WIDTH + "s %-" + MODEL_WIDTH + "s %-" + TYPE_WIDTH + "s %" +
                     PRICE_WIDTH + "s %" + DATE_WIDTH + "s\n";

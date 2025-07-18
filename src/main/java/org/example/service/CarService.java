@@ -48,7 +48,6 @@ public class CarService {
         return applySort(sortFactory.createTypeCurrencySorter());
     }
 
-    // Private helper methods
     private List<Car> applyFilter(FilterStrategy filter) {
         return getAllCars().stream()
                 .filter(Objects::nonNull)

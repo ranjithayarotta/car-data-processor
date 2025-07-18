@@ -35,10 +35,8 @@ public class PriceSortStrategy implements SortStrategy {
             return List.of();
         }
 
-        // Bulk fetch all needed brands first
         Map<String, CarBrand> brandCache = fetchBrandsForCars(cars);
 
-        // Process all cars in a single stream pipeline
         return cars.stream()
                 .filter(Objects::nonNull)
                 .map(car -> enrichCarWithBrand(car, brandCache))

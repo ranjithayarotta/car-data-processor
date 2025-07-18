@@ -83,8 +83,6 @@ public class XmlFormatter implements OutputFormatter {
         return car.getPrices().getOrDefault("USD", BigDecimal.ZERO);
     }
 
-    // ===== Nested JAXB-friendly Classes =====
-
     @XmlRootElement(name = "cars")
     @XmlAccessorType(XmlAccessType.FIELD)
     public static class CarListWrapper {

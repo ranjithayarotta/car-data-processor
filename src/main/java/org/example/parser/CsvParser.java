@@ -24,10 +24,10 @@ public class CsvParser implements FileParser<CarBrand> {
 
         try (Stream<String> lines = Files.lines(file.toPath())) {
             return lines
-                    .skip(1) // Skip header
+                    .skip(1)
                     .map(this::parseLine)
                     .filter(Objects::nonNull)
-                    .collect(Collectors.toUnmodifiableList());
+                    .toList();
         } catch (IOException e) {
             throw new ParserException("Failed to read CSV file: " + file.getName(), e);
         }
